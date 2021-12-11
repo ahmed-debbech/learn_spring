@@ -13,4 +13,6 @@ public interface StockService {
     Stock updateStock(Stock u);
 
     Stock retrieveStock(Long id);
+
+    void deleteStock(Long id);
 }

@@ -17,6 +17,7 @@ import lombok.*;
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
+@RequiredArgsConstructor
 @Entity
 @Table(name="T_STOCK")
 public class Stock implements Serializable{
@@ -25,11 +26,12 @@ public class Stock implements Serializable{
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private long idStock;
-	
+
+	@NonNull
 	private int qte;
-	
+	@NonNull
 	private int qteMin;
-	
+	@NonNull
 	private String libelleStock;
 	
 	@OneToMany(cascade = CascadeType.ALL, mappedBy="stock")
