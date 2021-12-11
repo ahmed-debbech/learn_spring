@@ -16,7 +16,7 @@ public class Produit implements Serializable{
 	
 	@Column(name="CODE_PRODUIT", length=10, unique=true, nullable=true)
 	private String code;
-	
+
 	private String libelle;
 	private float prixUnitaire;
 	
