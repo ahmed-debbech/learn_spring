@@ -1,7 +1,15 @@
 package tn.esprit.spring.springboot.entity;
 
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
+
 import javax.persistence.*;
 
+@Getter
+@Setter
+@NoArgsConstructor
 @Entity
 @Table(name="T_DETAILFACTURE")
 public class DetailFacture {
@@ -27,50 +35,4 @@ public class DetailFacture {
 		this.montantRemise = montantRemise;
 	}
 
-	public long getIdDetailFacture() {
-		return idDetailFacture;
-	}
-	public void setIdDetailFacture(long idDetailFacture) {
-		this.idDetailFacture = idDetailFacture;
-	}
-	public int getQte() {
-		return qte;
-	}
-	public void setQte(int qte) {
-		this.qte = qte;
-	}
-	public float getPrixTotal() {
-		return prixTotal;
-	}
-	public void setPrixTotal(float prixTotal) {
-		this.prixTotal = prixTotal;
-	}
-	public int getPourcentageRemise() {
-		return pourcentageRemise;
-	}
-	public void setPourcentageRemise(int pourcentageRemise) {
-		this.pourcentageRemise = pourcentageRemise;
-	}
-	public float getMontantRemise() {
-		return montantRemise;
-	}
-	public void setMontantRemise(float montantRemise) {
-		this.montantRemise = montantRemise;
-	}
-
-	public Produit getProduct() {
-		return product;
-	}
-
-	public void setProduct(Produit product) {
-		this.product = product;
-	}
-
-	public Facture getFacture() {
-		return facture;
-	}
-
-	public void setFacture(Facture facture) {
-		this.facture = facture;
-	}
 }

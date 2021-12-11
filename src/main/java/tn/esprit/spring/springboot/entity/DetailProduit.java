@@ -1,5 +1,10 @@
 package tn.esprit.spring.springboot.entity;
 
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
+
 import java.time.LocalDateTime;
 import java.util.Date;
 
@@ -15,6 +20,9 @@ import javax.persistence.Table;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 
+@Getter
+@Setter
+@NoArgsConstructor
 @Entity
 @Table(name="T_DETAILPRODUIT")
 public class DetailProduit {
@@ -32,7 +40,7 @@ public class DetailProduit {
   @Enumerated(EnumType.STRING)
   private CategorieProduit categorieProduit;
 
-  @OneToOne(mappedBy="produitDetail")
+  @OneToOne(mappedBy="detailProduit")
   private Produit produit;
 
     public DetailProduit(CategorieProduit categorieProduit, Produit p) {
@@ -41,37 +49,5 @@ public class DetailProduit {
         this.produit = p;
     }
 
-
-    public long getIdDetailProduit() {
-	return idDetailProduit;
-}
-
-public void setIdDetailProduit(long idDetailProduit) {
-	this.idDetailProduit = idDetailProduit;
-}
-
-public Date getDateCreation() {
-	return dateCreation;
-}
-
-public void setDateCreation(Date dateCreation) {
-	this.dateCreation = dateCreation;
-}
-
-public Date getDateDerniereModif() {
-	return dateDerniereModif;
-}
-
-public void setDateDerniereModif(Date dateDerniereModif) {
-	this.dateDerniereModif = dateDerniereModif;
-}
-
-public CategorieProduit getCategorieProduit() {
-	return categorieProduit;
-}
-
-public void setCategorieProduit(CategorieProduit categorieProduit) {
-	this.categorieProduit = categorieProduit;
-}
   
 }

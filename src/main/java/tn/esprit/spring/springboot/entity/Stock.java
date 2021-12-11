@@ -10,11 +10,15 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
-import lombok.RequiredArgsConstructor;
 
+import lombok.*;
+
+@Getter
+@Setter
+@NoArgsConstructor
+@AllArgsConstructor
 @Entity
 @Table(name="T_STOCK")
-@RequiredArgsConstructor
 public class Stock implements Serializable{
 
 	
@@ -31,30 +35,4 @@ public class Stock implements Serializable{
 	@OneToMany(cascade = CascadeType.ALL, mappedBy="stock")
 	private Set<Produit> Produits;
 
-	public long getIdStock() {
-		return idStock;
-	}
-	public void setIdStock(long idStock) {
-		this.idStock = idStock;
-	}
-	public int getQte() {
-		return qte;
-	}
-	public void setQte(int qte) {
-		this.qte = qte;
-	}
-	public int getQteMin() {
-		return qteMin;
-	}
-	public void setQteMin(int qteMin) {
-		this.qteMin = qteMin;
-	}
-	public String getLibelleStock() {
-		return libelleStock;
-	}
-	public void setLibelleStock(String libelleStock) {
-		this.libelleStock = libelleStock;
-	}
-	
-	
 }

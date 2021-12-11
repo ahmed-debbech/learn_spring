@@ -1,5 +1,10 @@
 package tn.esprit.spring.springboot.entity;
 
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
+
 import java.io.Serializable;
 import java.util.Set;
 
@@ -12,6 +17,10 @@ import javax.persistence.ManyToMany;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
+@Getter
+@Setter
+@NoArgsConstructor
+@AllArgsConstructor
 @Entity
 @Table(name="T_FOURNISSEUR")
 public class Fournisseur implements Serializable{
@@ -27,28 +36,5 @@ public class Fournisseur implements Serializable{
 	
 	@ManyToMany(mappedBy="fournisseurs", cascade = CascadeType.ALL)
 	private Set<Produit> produits;
-	
-	
-	public long getIdFournisseur() {
-		return idFournisseur;
-	}
-	public void setIdFournisseur(long idFournisseur) {
-		this.idFournisseur = idFournisseur;
-	}
-	public String getCode() {
-		return code;
-	}
-	public void setCode(String code) {
-		this.code = code;
-	}
-	public String getLibelle() {
-		return libelle;
-	}
-	public void setLibelle(String libelle) {
-		this.libelle = libelle;
-	}
-	
-	
-	
-	
+
 }

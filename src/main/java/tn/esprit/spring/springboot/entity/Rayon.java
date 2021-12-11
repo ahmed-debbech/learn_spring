@@ -1,5 +1,10 @@
 package tn.esprit.spring.springboot.entity;
 
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
+
 import java.io.Serializable;
 import java.util.Set;
 
@@ -11,6 +16,10 @@ import javax.persistence.Id;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
+@Getter
+@Setter
+@NoArgsConstructor
+@AllArgsConstructor
 @Entity
 @Table(name="T_RAYON")
 public class Rayon implements Serializable{
@@ -26,25 +35,5 @@ public class Rayon implements Serializable{
 	
 	@OneToMany(cascade = CascadeType.ALL, mappedBy="rayon")
 	private Set<Produit> Produits;
-	
-	public long getIdRayon() {
-		return idRayon;
-	}
-	public void setIdRayon(long idRayon) {
-		this.idRayon = idRayon;
-	}
-	public String getCode() {
-		return code;
-	}
-	public void setCode(String code) {
-		this.code = code;
-	}
-	public String getLibelle() {
-		return libelle;
-	}
-	public void setLibelle(String libelle) {
-		this.libelle = libelle;
-	}
-	
-	
+
 }

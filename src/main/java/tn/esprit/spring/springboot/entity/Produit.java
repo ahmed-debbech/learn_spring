@@ -1,10 +1,19 @@
 package tn.esprit.spring.springboot.entity;
 
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
+
 import java.io.Serializable;
 import java.util.Set;
 
 import javax.persistence.*;
 
+@Getter
+@Setter
+@NoArgsConstructor
+@AllArgsConstructor
 @Entity
 @Table(name="T_PRODUIT")
 public class Produit implements Serializable{
@@ -21,7 +30,7 @@ public class Produit implements Serializable{
 	private float prixUnitaire;
 	
 	@OneToOne(cascade = CascadeType.ALL)
-	private DetailProduit produitDetail;
+	private DetailProduit detailProduit;
 	
 	@ManyToOne(cascade = CascadeType.ALL)
 	@JoinColumn( name = "product_id" )
@@ -35,49 +44,5 @@ public class Produit implements Serializable{
 	
 	@ManyToMany(cascade = CascadeType.ALL)
 	private Set<Fournisseur> fournisseurs;
-	
-	public long getIdProduit() {
-		return idProduit;
-	}
-	public void setIdProduit(long idProduit) {
-		this.idProduit = idProduit;
-	}
-	public String getCode() {
-		return code;
-	}
-	public void setCode(String code) {
-		this.code = code;
-	}
-	public String getLibelle() {
-		return libelle;
-	}
-	public void setLibelle(String libelle) {
-		this.libelle = libelle;
-	}
-	public float getPrixUnitaire() {
-		return prixUnitaire;
-	}
-	public void setPrixUnitaire(float prixUnitaire) {
-		this.prixUnitaire = prixUnitaire;
-	}
-	public void setRayon(Rayon r) {
-		this.rayon = r;
-		
-	}
-	public void setStock(Stock s) {
-		this.stock = s;
-		
-	}
-	public void setDetailProduit(DetailProduit dp) {
-		this.produitDetail = dp;
-		
-	}
 
-	public DetailProduit getProduitDetail() {
-		return produitDetail;
-	}
-
-	public void setProduitDetail(DetailProduit produitDetail) {
-		this.produitDetail = produitDetail;
-	}
 }

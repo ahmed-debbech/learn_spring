@@ -1,5 +1,10 @@
 package tn.esprit.spring.springboot.entity;
 
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
+
 import java.util.Date;
 import java.util.Set;
 
@@ -14,6 +19,10 @@ import javax.persistence.Table;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 
+@Getter
+@Setter
+@NoArgsConstructor
+@AllArgsConstructor
 @Entity
 @Table(name="T_FACTURE")
 public class Facture {
@@ -38,37 +47,6 @@ public class Facture {
 	
 	@ManyToOne
 	Client client;
-	
-	public long getIdFacture() {
-		return idFacture;
-	}
-	public void setIdFacture(long idFacture) {
-		this.idFacture = idFacture;
-	}
-	public float getMontantRemise() {
-		return montantRemise;
-	}
-	public void setMontantRemise(float montantRemise) {
-		this.montantRemise = montantRemise;
-	}
-	public float getMontantFacture() {
-		return montantFacture;
-	}
-	public void setMontantFacture(float montantFacture) {
-		this.montantFacture = montantFacture;
-	}
-	public Date getDateFacture() {
-		return dateFacture;
-	}
-	public void setDateFacture(Date dateFacture) {
-		this.dateFacture = dateFacture;
-	}
-	public boolean isActive() {
-		return active;
-	}
-	public void setActive(boolean active) {
-		this.active = active;
-	}
 	
 	
 }
