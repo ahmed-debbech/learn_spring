@@ -1,11 +1,6 @@
 package tn.esprit.spring.springboot.entity;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-import javax.persistence.ManyToOne;
-import javax.persistence.Table;
+import javax.persistence.*;
 
 @Entity
 @Table(name="T_DETAILFACTURE")
@@ -19,13 +14,19 @@ public class DetailFacture {
 	private int pourcentageRemise;
 	private float montantRemise;
 	
-	@ManyToOne
-	Produit product;
+	@OneToOne
+	private Produit product;
 	
 	@ManyToOne
-	Facture facture;
-	
-	
+	private Facture facture;
+
+	public DetailFacture(int qte, float prixTotal, int pourcentageRemise, float montantRemise) {
+		this.qte = qte;
+		this.prixTotal = prixTotal;
+		this.pourcentageRemise = pourcentageRemise;
+		this.montantRemise = montantRemise;
+	}
+
 	public long getIdDetailFacture() {
 		return idDetailFacture;
 	}
@@ -56,7 +57,20 @@ public class DetailFacture {
 	public void setMontantRemise(float montantRemise) {
 		this.montantRemise = montantRemise;
 	}
-	
-	
-	
+
+	public Produit getProduct() {
+		return product;
+	}
+
+	public void setProduct(Produit product) {
+		this.product = product;
+	}
+
+	public Facture getFacture() {
+		return facture;
+	}
+
+	public void setFacture(Facture facture) {
+		this.facture = facture;
+	}
 }

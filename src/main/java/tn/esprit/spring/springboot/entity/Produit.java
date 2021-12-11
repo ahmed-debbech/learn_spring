@@ -3,17 +3,7 @@ package tn.esprit.spring.springboot.entity;
 import java.io.Serializable;
 import java.util.Set;
 
-import javax.persistence.CascadeType;
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-import javax.persistence.ManyToMany;
-import javax.persistence.ManyToOne;
-import javax.persistence.OneToMany;
-import javax.persistence.OneToOne;
-import javax.persistence.Table;
+import javax.persistence.*;
 
 @Entity
 @Table(name="T_PRODUIT")
@@ -30,10 +20,11 @@ public class Produit implements Serializable{
 	private String libelle;
 	private float prixUnitaire;
 	
-	@OneToOne
+	@OneToOne(cascade = CascadeType.ALL)
 	private DetailProduit produitDetail;
 	
-	@ManyToOne
+	@ManyToOne(cascade = CascadeType.ALL)
+	@JoinColumn( name = "product_id" )
 	Stock stock;
 	
 	@ManyToOne
@@ -82,8 +73,11 @@ public class Produit implements Serializable{
 		
 	}
 
-	
-	
-	
-	
+	public DetailProduit getProduitDetail() {
+		return produitDetail;
+	}
+
+	public void setProduitDetail(DetailProduit produitDetail) {
+		this.produitDetail = produitDetail;
+	}
 }

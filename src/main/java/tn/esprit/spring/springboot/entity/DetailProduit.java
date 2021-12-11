@@ -1,5 +1,6 @@
 package tn.esprit.spring.springboot.entity;
 
+import java.time.LocalDateTime;
 import java.util.Date;
 
 import javax.persistence.Entity;
@@ -34,15 +35,12 @@ public class DetailProduit {
   @OneToOne(mappedBy="produitDetail")
   private Produit produit;
 
-    public DetailProduit() {
+    public DetailProduit(CategorieProduit categorieProduit, Produit p) {
+        dateCreation = new Date();
+        this.categorieProduit = categorieProduit;
+        this.produit = p;
     }
 
-    public DetailProduit(long idDetailProduit, Date dateCreation, Date dateDerniereModif, CategorieProduit categorieProduit) {
-        this.idDetailProduit = idDetailProduit;
-        this.dateCreation = dateCreation;
-        this.dateDerniereModif = dateDerniereModif;
-        this.categorieProduit = categorieProduit;
-    }
 
     public long getIdDetailProduit() {
 	return idDetailProduit;
