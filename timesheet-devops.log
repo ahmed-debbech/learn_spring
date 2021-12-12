@@ -105,3 +105,26 @@ Caused by: java.lang.NullPointerException: null
 2021-12-12 21:25:32 - INFO - o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default' 
 2021-12-12 21:25:32 - INFO - com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated... 
 2021-12-12 21:25:32 - INFO - com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed. 
+2021-12-12 21:52:49 - INFO - t.e.spring.springboot.Application - Starting Application using Java 11.0.12 on DebianDevil with PID 21032 (/home/ahmed/Desktop/learn_spring/target/classes started by ahmed in /home/ahmed/Desktop/learn_spring) 
+2021-12-12 21:52:49 - INFO - t.e.spring.springboot.Application - No active profile set, falling back to default profiles: default 
+2021-12-12 21:52:49 - INFO - o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable 
+2021-12-12 21:52:49 - INFO - o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG' 
+2021-12-12 21:52:50 - INFO - o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode. 
+2021-12-12 21:52:50 - INFO - o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 83 ms. Found 5 JPA repository interfaces. 
+2021-12-12 21:52:51 - INFO - o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8089 (http) 
+2021-12-12 21:52:51 - INFO - o.a.catalina.core.StandardService - Starting service [Tomcat] 
+2021-12-12 21:52:51 - INFO - o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.55] 
+2021-12-12 21:52:51 - INFO - o.a.c.c.C.[.[localhost].[/SpringMVC] - Initializing Spring embedded WebApplicationContext 
+2021-12-12 21:52:51 - INFO - o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1447 ms 
+2021-12-12 21:52:51 - INFO - o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default] 
+2021-12-12 21:52:51 - INFO - org.hibernate.Version - HHH000412: Hibernate ORM core version 5.6.1.Final 
+2021-12-12 21:52:51 - INFO - o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final} 
+2021-12-12 21:52:51 - INFO - com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting... 
+2021-12-12 21:52:51 - INFO - com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed. 
+2021-12-12 21:52:51 - INFO - org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect 
+2021-12-12 21:52:52 - INFO - o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform] 
+2021-12-12 21:52:52 - INFO - o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default' 
+2021-12-12 21:52:53 - WARN - o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning 
+2021-12-12 21:52:53 - INFO - o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729 
+2021-12-12 21:52:53 - INFO - o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8089 (http) with context path '/SpringMVC' 
+2021-12-12 21:52:53 - INFO - t.e.spring.springboot.Application - Started Application in 3.961 seconds (JVM running for 4.528) 

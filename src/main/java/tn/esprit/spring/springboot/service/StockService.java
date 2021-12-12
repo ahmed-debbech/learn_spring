@@ -15,4 +15,8 @@ public interface StockService {
     Stock retrieveStock(Long id);
 
     void deleteStock(Long id);
+
+    void showInEveryMin();
+
+    void calculateRevenue();
 }
