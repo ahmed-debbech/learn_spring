@@ -42,7 +42,7 @@ public class StockServiceImpl implements StockService{
     }
 
     @Override
-    @Scheduled(cron = "*/60 * * * * *")
+    @Scheduled(cron = "* */60 * * * * ")
     public void showInEveryMin() {
         log.info("entered showInEveryMin method after the stock ended");
         List<Stock> list = stockRepository.findAll();
@@ -57,7 +57,7 @@ public class StockServiceImpl implements StockService{
         }
     }
 
-    @Scheduled(cron = "0 0 1 * * *")
+    @Scheduled(cron = "0 0 0 1 * *")
     @Override
     public void calculateRevenue(){
         log.info("entered calculated revenue");

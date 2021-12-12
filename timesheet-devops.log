@@ -128,3 +128,163 @@ Caused by: java.lang.NullPointerException: null
 2021-12-12 21:52:53 - INFO - o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729 
 2021-12-12 21:52:53 - INFO - o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8089 (http) with context path '/SpringMVC' 
 2021-12-12 21:52:53 - INFO - t.e.spring.springboot.Application - Started Application in 3.961 seconds (JVM running for 4.528) 
+2021-12-12 21:53:00 - INFO - t.e.s.s.service.StockServiceImpl - entered showInEveryMin method after the stock ended 
+2021-12-12 21:54:00 - INFO - t.e.s.s.service.StockServiceImpl - entered showInEveryMin method after the stock ended 
+2021-12-12 21:54:15 - INFO - o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default' 
+2021-12-12 21:54:15 - INFO - com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated... 
+2021-12-12 21:54:15 - INFO - com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed. 
+2021-12-12 21:54:19 - INFO - t.e.spring.springboot.Application - Starting Application using Java 11.0.12 on DebianDevil with PID 21796 (/home/ahmed/Desktop/learn_spring/target/classes started by ahmed in /home/ahmed/Desktop/learn_spring) 
+2021-12-12 21:54:19 - INFO - t.e.spring.springboot.Application - No active profile set, falling back to default profiles: default 
+2021-12-12 21:54:19 - INFO - o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable 
+2021-12-12 21:54:19 - INFO - o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG' 
+2021-12-12 21:54:20 - INFO - o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode. 
+2021-12-12 21:54:20 - INFO - o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 65 ms. Found 5 JPA repository interfaces. 
+2021-12-12 21:54:21 - INFO - o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8089 (http) 
+2021-12-12 21:54:21 - INFO - o.a.catalina.core.StandardService - Starting service [Tomcat] 
+2021-12-12 21:54:21 - INFO - o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.55] 
+2021-12-12 21:54:21 - INFO - o.a.c.c.C.[.[localhost].[/SpringMVC] - Initializing Spring embedded WebApplicationContext 
+2021-12-12 21:54:21 - INFO - o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1408 ms 
+2021-12-12 21:54:21 - INFO - o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default] 
+2021-12-12 21:54:21 - INFO - org.hibernate.Version - HHH000412: Hibernate ORM core version 5.6.1.Final 
+2021-12-12 21:54:21 - INFO - o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final} 
+2021-12-12 21:54:21 - INFO - com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting... 
+2021-12-12 21:54:21 - INFO - com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed. 
+2021-12-12 21:54:21 - INFO - org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect 
+2021-12-12 21:54:22 - INFO - o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform] 
+2021-12-12 21:54:22 - INFO - o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default' 
+2021-12-12 21:54:23 - WARN - o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'produitServiceImpl': Unsatisfied dependency expressed through field 'stockService'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'stockServiceImpl' defined in file [/home/ahmed/Desktop/learn_spring/target/classes/tn/esprit/spring/springboot/service/StockServiceImpl.class]: Initialization of bean failed; nested exception is java.lang.IllegalStateException: Encountered invalid @Scheduled method 'showInEveryMin': Cron expression must consist of 6 fields (found 7 in "* */60 * * * * *") 
+2021-12-12 21:54:23 - INFO - o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default' 
+2021-12-12 21:54:23 - INFO - com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated... 
+2021-12-12 21:54:23 - INFO - com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed. 
+2021-12-12 21:54:23 - INFO - o.a.catalina.core.StandardService - Stopping service [Tomcat] 
+2021-12-12 21:54:23 - INFO - o.s.b.a.l.ConditionEvaluationReportLoggingListener - 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled. 
+2021-12-12 21:54:23 - ERROR- o.s.boot.SpringApplication - Application run failed 
+org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'produitServiceImpl': Unsatisfied dependency expressed through field 'stockService'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'stockServiceImpl' defined in file [/home/ahmed/Desktop/learn_spring/target/classes/tn/esprit/spring/springboot/service/StockServiceImpl.class]: Initialization of bean failed; nested exception is java.lang.IllegalStateException: Encountered invalid @Scheduled method 'showInEveryMin': Cron expression must consist of 6 fields (found 7 in "* */60 * * * * *")
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.resolveFieldValue(AutowiredAnnotationBeanPostProcessor.java:659)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:639)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:119)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:399)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1431)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:619)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:944)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:918)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:583)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:145)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:730)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:412)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:302)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1301)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1290)
+	at tn.esprit.spring.springboot.Application.main(Application.java:12)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49)
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'stockServiceImpl' defined in file [/home/ahmed/Desktop/learn_spring/target/classes/tn/esprit/spring/springboot/service/StockServiceImpl.class]: Initialization of bean failed; nested exception is java.lang.IllegalStateException: Encountered invalid @Scheduled method 'showInEveryMin': Cron expression must consist of 6 fields (found 7 in "* */60 * * * * *")
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:628)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:276)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1380)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1300)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.resolveFieldValue(AutowiredAnnotationBeanPostProcessor.java:656)
+	... 25 common frames omitted
+Caused by: java.lang.IllegalStateException: Encountered invalid @Scheduled method 'showInEveryMin': Cron expression must consist of 6 fields (found 7 in "* */60 * * * * *")
+	at org.springframework.scheduling.annotation.ScheduledAnnotationBeanPostProcessor.processScheduled(ScheduledAnnotationBeanPostProcessor.java:518)
+	at org.springframework.scheduling.annotation.ScheduledAnnotationBeanPostProcessor.lambda$null$1(ScheduledAnnotationBeanPostProcessor.java:380)
+	at java.base/java.lang.Iterable.forEach(Iterable.java:75)
+	at org.springframework.scheduling.annotation.ScheduledAnnotationBeanPostProcessor.lambda$postProcessAfterInitialization$2(ScheduledAnnotationBeanPostProcessor.java:380)
+	at java.base/java.util.LinkedHashMap.forEach(LinkedHashMap.java:684)
+	at org.springframework.scheduling.annotation.ScheduledAnnotationBeanPostProcessor.postProcessAfterInitialization(ScheduledAnnotationBeanPostProcessor.java:379)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyBeanPostProcessorsAfterInitialization(AbstractAutowireCapableBeanFactory.java:455)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1808)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:620)
+	... 34 common frames omitted
+2021-12-12 21:54:53 - INFO - t.e.spring.springboot.Application - Starting Application using Java 11.0.12 on DebianDevil with PID 22043 (/home/ahmed/Desktop/learn_spring/target/classes started by ahmed in /home/ahmed/Desktop/learn_spring) 
+2021-12-12 21:54:53 - INFO - t.e.spring.springboot.Application - No active profile set, falling back to default profiles: default 
+2021-12-12 21:54:53 - INFO - o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable 
+2021-12-12 21:54:53 - INFO - o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG' 
+2021-12-12 21:54:54 - INFO - o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode. 
+2021-12-12 21:54:54 - INFO - o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 67 ms. Found 5 JPA repository interfaces. 
+2021-12-12 21:54:55 - INFO - o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8089 (http) 
+2021-12-12 21:54:55 - INFO - o.a.catalina.core.StandardService - Starting service [Tomcat] 
+2021-12-12 21:54:55 - INFO - o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.55] 
+2021-12-12 21:54:55 - INFO - o.a.c.c.C.[.[localhost].[/SpringMVC] - Initializing Spring embedded WebApplicationContext 
+2021-12-12 21:54:55 - INFO - o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1415 ms 
+2021-12-12 21:54:55 - INFO - o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default] 
+2021-12-12 21:54:55 - INFO - org.hibernate.Version - HHH000412: Hibernate ORM core version 5.6.1.Final 
+2021-12-12 21:54:55 - INFO - o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final} 
+2021-12-12 21:54:55 - INFO - com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting... 
+2021-12-12 21:54:55 - INFO - com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed. 
+2021-12-12 21:54:55 - INFO - org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect 
+2021-12-12 21:54:56 - INFO - o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform] 
+2021-12-12 21:54:56 - INFO - o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default' 
+2021-12-12 21:54:57 - WARN - o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning 
+2021-12-12 21:54:57 - INFO - o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729 
+2021-12-12 21:54:57 - INFO - o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8089 (http) with context path '/SpringMVC' 
+2021-12-12 21:54:57 - INFO - t.e.spring.springboot.Application - Started Application in 4.153 seconds (JVM running for 4.663) 
+2021-12-12 21:57:07 - INFO - o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default' 
+2021-12-12 21:57:07 - INFO - com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated... 
+2021-12-12 21:57:07 - INFO - com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed. 
+2021-12-12 22:06:03 - INFO - t.e.spring.springboot.Application - Starting Application using Java 11.0.12 on DebianDevil with PID 25640 (/home/ahmed/Desktop/learn_spring/target/classes started by ahmed in /home/ahmed/Desktop/learn_spring) 
+2021-12-12 22:06:03 - INFO - t.e.spring.springboot.Application - No active profile set, falling back to default profiles: default 
+2021-12-12 22:06:03 - INFO - o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable 
+2021-12-12 22:06:03 - INFO - o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG' 
+2021-12-12 22:06:04 - INFO - o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode. 
+2021-12-12 22:06:04 - INFO - o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 63 ms. Found 5 JPA repository interfaces. 
+2021-12-12 22:06:05 - INFO - o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8089 (http) 
+2021-12-12 22:06:05 - INFO - o.a.catalina.core.StandardService - Starting service [Tomcat] 
+2021-12-12 22:06:05 - INFO - o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.55] 
+2021-12-12 22:06:05 - INFO - o.a.c.c.C.[.[localhost].[/SpringMVC] - Initializing Spring embedded WebApplicationContext 
+2021-12-12 22:06:05 - INFO - o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1216 ms 
+2021-12-12 22:06:05 - INFO - o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default] 
+2021-12-12 22:06:05 - INFO - org.hibernate.Version - HHH000412: Hibernate ORM core version 5.6.1.Final 
+2021-12-12 22:06:05 - INFO - o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final} 
+2021-12-12 22:06:05 - INFO - com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting... 
+2021-12-12 22:06:05 - INFO - com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed. 
+2021-12-12 22:06:05 - INFO - org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect 
+2021-12-12 22:06:06 - INFO - o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform] 
+2021-12-12 22:06:06 - INFO - o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default' 
+2021-12-12 22:06:06 - WARN - o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning 
+2021-12-12 22:06:07 - INFO - o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729 
+2021-12-12 22:06:07 - INFO - o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8089 (http) with context path '/SpringMVC' 
+2021-12-12 22:06:07 - INFO - t.e.spring.springboot.Application - Started Application in 3.8 seconds (JVM running for 4.342) 
+2021-12-12 22:06:11 - INFO - o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default' 
+2021-12-12 22:06:11 - INFO - com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated... 
+2021-12-12 22:06:11 - INFO - com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed. 
+2021-12-12 22:06:23 - INFO - t.e.s.s.StockServiceTestImpl - Starting StockServiceTestImpl using Java 11.0.12 on DebianDevil with PID 25817 (started by ahmed in /home/ahmed/Desktop/learn_spring) 
+2021-12-12 22:06:23 - INFO - t.e.s.s.StockServiceTestImpl - No active profile set, falling back to default profiles: default 
+2021-12-12 22:06:24 - INFO - o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode. 
+2021-12-12 22:06:24 - INFO - o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 51 ms. Found 5 JPA repository interfaces. 
+2021-12-12 22:06:24 - INFO - o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default] 
+2021-12-12 22:06:24 - INFO - org.hibernate.Version - HHH000412: Hibernate ORM core version 5.6.1.Final 
+2021-12-12 22:06:24 - INFO - o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final} 
+2021-12-12 22:06:25 - INFO - com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting... 
+2021-12-12 22:06:25 - INFO - com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed. 
+2021-12-12 22:06:25 - INFO - org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect 
+2021-12-12 22:06:25 - INFO - o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform] 
+2021-12-12 22:06:25 - INFO - o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default' 
+2021-12-12 22:06:26 - WARN - o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning 
+2021-12-12 22:06:27 - INFO - t.e.s.s.StockServiceTestImpl - Started StockServiceTestImpl in 3.877 seconds (JVM running for 4.75) 
+2021-12-12 22:06:27 - INFO - t.e.s.s.config.LoggingAspect - In method deleteStock :  
+2021-12-12 22:06:27 - INFO - t.e.s.s.config.LoggingAspect - out of method deleteStock :  
+2021-12-12 22:06:27 - INFO - t.e.s.s.config.LoggingAspect - In method retrieveStock :  
+2021-12-12 22:06:27 - INFO - t.e.s.s.config.LoggingAspect - out of method retrieveStock :  
+2021-12-12 22:06:27 - INFO - t.e.s.s.config.LoggingAspect - In method addStock :  
+2021-12-12 22:06:27 - INFO - t.e.s.s.config.LoggingAspect - out of method addStock :  
+2021-12-12 22:06:27 - INFO - t.e.s.s.config.LoggingAspect - In method retrieveAllStocks :  
+2021-12-12 22:06:27 - INFO - t.e.s.s.config.LoggingAspect - out of method retrieveAllStocks :  
+2021-12-12 22:06:27 - INFO - o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default' 
+2021-12-12 22:06:27 - INFO - com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated... 
+2021-12-12 22:06:27 - INFO - com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed. 
