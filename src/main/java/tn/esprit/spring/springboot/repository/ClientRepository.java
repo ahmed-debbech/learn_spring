@@ -24,4 +24,6 @@ public interface ClientRepository extends JpaRepository<Client, Long> {
     @Modifying
     @Query("delete from Client c where c.CategorieClient = :categorie and c.profession = :profession")
     void deleteClientByCategorieClientAndProfession(@Param("profession") Profession profession, @Param("categorie") CategorieClient categorieClient);
+
+    Client findByEmail(String email);
 }
