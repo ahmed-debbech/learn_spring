@@ -10,6 +10,6 @@ import java.util.List;
 @Repository
 public interface FactureRepository extends JpaRepository<Facture, Long> {
 
-    @Query("select * from Facture f where f.client == idClient")
+    //@Query("select * from Facture f where f.client.idClient == idClient")
     List<Facture> getFacturesByClient(Long idClient);
 }

@@ -6,6 +6,7 @@ import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Service;
 import tn.esprit.spring.springboot.entity.Produit;
 import tn.esprit.spring.springboot.entity.Stock;
+import tn.esprit.spring.springboot.repository.ProduitRepository;
 import tn.esprit.spring.springboot.repository.StockRepository;
 
 import java.util.List;
@@ -19,7 +20,7 @@ public class StockServiceImpl implements StockService{
 
 
     @Autowired
-    private ProduitService produitService;
+    private ProduitRepository produitService;
 
     @Override
     public List<Stock> retrieveAllStocks() {
@@ -50,7 +51,7 @@ public class StockServiceImpl implements StockService{
     public void assignProduitToStock(Long idProduit, Long idStock) {
         Stock st = stockRepository.findById(idStock).orElse(null);
         if(st != null){
-            Produit p = produitService.retrieveProduit(idProduit);
+            Produit p = produitService.getById(idProduit);
             if(p != null){
                 st.getProduits().add(p);
                 stockRepository.save(st);
