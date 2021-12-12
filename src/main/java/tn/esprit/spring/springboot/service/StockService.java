@@ -16,6 +16,8 @@ public interface StockService {
 
     void deleteStock(Long id);
 
+    void assignProduitToStock(Long idProduit, Long idStock);
+
     void showInEveryMin();
 
     void calculateRevenue();

@@ -637,3 +637,131 @@ Caused by: org.springframework.security.authentication.BadCredentialsException: 
 2021-12-12 22:48:50 - INFO - t.e.spring.springboot.Application - No active profile set, falling back to default profiles: default 
 2021-12-12 22:48:51 - INFO - o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable 
 2021-12-12 22:48:51 - INFO - o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG' 
+2021-12-12 22:48:51 - INFO - o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode. 
+2021-12-12 22:48:51 - INFO - o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 55 ms. Found 5 JPA repository interfaces. 
+2021-12-12 22:48:52 - INFO - o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8089 (http) 
+2021-12-12 22:48:52 - INFO - o.a.catalina.core.StandardService - Starting service [Tomcat] 
+2021-12-12 22:48:52 - INFO - o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.55] 
+2021-12-12 22:48:52 - INFO - o.a.c.c.C.[.[localhost].[/SpringMVC] - Initializing Spring embedded WebApplicationContext 
+2021-12-12 22:48:52 - INFO - o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1512 ms 
+2021-12-12 22:48:52 - INFO - o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default] 
+2021-12-12 22:48:52 - INFO - org.hibernate.Version - HHH000412: Hibernate ORM core version 5.6.1.Final 
+2021-12-12 22:48:52 - INFO - o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final} 
+2021-12-12 22:48:53 - INFO - com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting... 
+2021-12-12 22:48:53 - INFO - com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed. 
+2021-12-12 22:48:53 - INFO - org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect 
+2021-12-12 22:48:53 - INFO - o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform] 
+2021-12-12 22:48:53 - INFO - o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default' 
+2021-12-12 22:48:54 - WARN - o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning 
+2021-12-12 22:48:54 - INFO - o.s.s.web.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@10501ecf, org.springframework.security.web.context.SecurityContextPersistenceFilter@5c53adfd, org.springframework.security.web.header.HeaderWriterFilter@18a647a, org.springframework.security.web.authentication.logout.LogoutFilter@18999003, tn.esprit.spring.springboot.config.JwtAuthorizationFIlter@7f88d499, tn.esprit.spring.springboot.config.JwtAuthenticationFilter@7916c064, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@11577f75, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@89997a, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@4ad33ea4, org.springframework.security.web.session.SessionManagementFilter@3fdc176d, org.springframework.security.web.access.ExceptionTranslationFilter@15ec33ee, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@6a05a789] 
+2021-12-12 22:48:54 - WARN - o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'requestMappingHandlerMapping' defined in class path resource [org/springframework/boot/autoconfigure/web/servlet/WebMvcAutoConfiguration$EnableWebMvcConfiguration.class]: Invocation of init method failed; nested exception is java.lang.IllegalStateException: Ambiguous mapping. Cannot map 'stockController' method 
+tn.esprit.spring.springboot.controller.StockController#add(Stock)
+to {POST [/produit/add]}: There is already 'rayonController' bean method
+tn.esprit.spring.springboot.controller.RayonController#add(Rayon) mapped. 
+2021-12-12 22:48:54 - INFO - o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default' 
+2021-12-12 22:48:54 - INFO - com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated... 
+2021-12-12 22:48:54 - INFO - com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed. 
+2021-12-12 22:48:54 - INFO - o.a.catalina.core.StandardService - Stopping service [Tomcat] 
+2021-12-12 22:48:54 - INFO - o.s.b.a.l.ConditionEvaluationReportLoggingListener - 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled. 
+2021-12-12 22:48:54 - ERROR- o.s.boot.SpringApplication - Application run failed 
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'requestMappingHandlerMapping' defined in class path resource [org/springframework/boot/autoconfigure/web/servlet/WebMvcAutoConfiguration$EnableWebMvcConfiguration.class]: Invocation of init method failed; nested exception is java.lang.IllegalStateException: Ambiguous mapping. Cannot map 'stockController' method 
+tn.esprit.spring.springboot.controller.StockController#add(Stock)
+to {POST [/produit/add]}: There is already 'rayonController' bean method
+tn.esprit.spring.springboot.controller.RayonController#add(Rayon) mapped.
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1804)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:620)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:944)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:918)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:583)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:145)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:730)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:412)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:302)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1301)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1290)
+	at tn.esprit.spring.springboot.Application.main(Application.java:16)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49)
+Caused by: java.lang.IllegalStateException: Ambiguous mapping. Cannot map 'stockController' method 
+tn.esprit.spring.springboot.controller.StockController#add(Stock)
+to {POST [/produit/add]}: There is already 'rayonController' bean method
+tn.esprit.spring.springboot.controller.RayonController#add(Rayon) mapped.
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry.validateMethodMapping(AbstractHandlerMethodMapping.java:669)
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry.register(AbstractHandlerMethodMapping.java:635)
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.registerHandlerMethod(AbstractHandlerMethodMapping.java:332)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping.registerHandlerMethod(RequestMappingHandlerMapping.java:395)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping.registerHandlerMethod(RequestMappingHandlerMapping.java:76)
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.lambda$detectHandlerMethods$2(AbstractHandlerMethodMapping.java:299)
+	at java.base/java.util.LinkedHashMap.forEach(LinkedHashMap.java:684)
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.detectHandlerMethods(AbstractHandlerMethodMapping.java:297)
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.processCandidateBean(AbstractHandlerMethodMapping.java:266)
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.initHandlerMethods(AbstractHandlerMethodMapping.java:225)
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.afterPropertiesSet(AbstractHandlerMethodMapping.java:213)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping.afterPropertiesSet(RequestMappingHandlerMapping.java:206)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1863)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1800)
+	... 21 common frames omitted
+2021-12-12 22:49:24 - INFO - t.e.spring.springboot.Application - Starting Application using Java 11.0.12 on DebianDevil with PID 9755 (/home/ahmed/Desktop/learn_spring/target/classes started by ahmed in /home/ahmed/Desktop/learn_spring) 
+2021-12-12 22:49:24 - INFO - t.e.spring.springboot.Application - No active profile set, falling back to default profiles: default 
+2021-12-12 22:49:24 - INFO - o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable 
+2021-12-12 22:49:24 - INFO - o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG' 
+2021-12-12 22:49:25 - INFO - o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode. 
+2021-12-12 22:49:25 - INFO - o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 57 ms. Found 5 JPA repository interfaces. 
+2021-12-12 22:49:26 - INFO - o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8089 (http) 
+2021-12-12 22:49:26 - INFO - o.a.catalina.core.StandardService - Starting service [Tomcat] 
+2021-12-12 22:49:26 - INFO - o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.55] 
+2021-12-12 22:49:26 - INFO - o.a.c.c.C.[.[localhost].[/SpringMVC] - Initializing Spring embedded WebApplicationContext 
+2021-12-12 22:49:26 - INFO - o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1553 ms 
+2021-12-12 22:49:26 - INFO - o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default] 
+2021-12-12 22:49:26 - INFO - org.hibernate.Version - HHH000412: Hibernate ORM core version 5.6.1.Final 
+2021-12-12 22:49:26 - INFO - o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final} 
+2021-12-12 22:49:26 - INFO - com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting... 
+2021-12-12 22:49:26 - INFO - com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed. 
+2021-12-12 22:49:26 - INFO - org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect 
+2021-12-12 22:49:27 - INFO - o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform] 
+2021-12-12 22:49:27 - INFO - o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default' 
+2021-12-12 22:49:28 - WARN - o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning 
+2021-12-12 22:49:28 - INFO - o.s.s.web.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@4bf6d75, org.springframework.security.web.context.SecurityContextPersistenceFilter@69bcdd76, org.springframework.security.web.header.HeaderWriterFilter@61aebd9b, org.springframework.security.web.authentication.logout.LogoutFilter@2931bbfc, tn.esprit.spring.springboot.config.JwtAuthorizationFIlter@3388b90b, tn.esprit.spring.springboot.config.JwtAuthenticationFilter@69876fc7, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@6ac3eeaf, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@4d841a67, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@645e5882, org.springframework.security.web.session.SessionManagementFilter@333ea25e, org.springframework.security.web.access.ExceptionTranslationFilter@ab09fec, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@2056359] 
+2021-12-12 22:49:28 - INFO - o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729 
+2021-12-12 22:49:28 - INFO - o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8089 (http) with context path '/SpringMVC' 
+2021-12-12 22:49:28 - INFO - t.e.spring.springboot.Application - Started Application in 4.89 seconds (JVM running for 5.453) 
+2021-12-12 22:49:34 - INFO - o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default' 
+2021-12-12 22:49:34 - INFO - com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated... 
+2021-12-12 22:49:34 - INFO - com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed. 
+2021-12-12 22:49:37 - INFO - t.e.spring.springboot.Application - Starting Application using Java 11.0.12 on DebianDevil with PID 9900 (/home/ahmed/Desktop/learn_spring/target/classes started by ahmed in /home/ahmed/Desktop/learn_spring) 
+2021-12-12 22:49:37 - INFO - t.e.spring.springboot.Application - No active profile set, falling back to default profiles: default 
+2021-12-12 22:49:38 - INFO - o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable 
+2021-12-12 22:49:38 - INFO - o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG' 
+2021-12-12 22:49:38 - INFO - o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode. 
+2021-12-12 22:49:38 - INFO - o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 51 ms. Found 5 JPA repository interfaces. 
+2021-12-12 22:49:39 - INFO - o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8089 (http) 
+2021-12-12 22:49:39 - INFO - o.a.catalina.core.StandardService - Starting service [Tomcat] 
+2021-12-12 22:49:39 - INFO - o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.55] 
+2021-12-12 22:49:39 - INFO - o.a.c.c.C.[.[localhost].[/SpringMVC] - Initializing Spring embedded WebApplicationContext 
+2021-12-12 22:49:39 - INFO - o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1515 ms 
+2021-12-12 22:49:39 - INFO - o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default] 
+2021-12-12 22:49:39 - INFO - org.hibernate.Version - HHH000412: Hibernate ORM core version 5.6.1.Final 
+2021-12-12 22:49:39 - INFO - o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final} 
+2021-12-12 22:49:39 - INFO - com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting... 
+2021-12-12 22:49:40 - INFO - com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed. 
+2021-12-12 22:49:40 - INFO - org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect 
+2021-12-12 22:49:40 - INFO - o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform] 
+2021-12-12 22:49:40 - INFO - o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default' 
+2021-12-12 22:49:41 - WARN - o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning 
+2021-12-12 22:49:41 - INFO - o.s.s.web.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@d2dfc41, org.springframework.security.web.context.SecurityContextPersistenceFilter@23883686, org.springframework.security.web.header.HeaderWriterFilter@5765d17, org.springframework.security.web.authentication.logout.LogoutFilter@2b7a709, tn.esprit.spring.springboot.config.JwtAuthorizationFIlter@5f7e886, tn.esprit.spring.springboot.config.JwtAuthenticationFilter@9e89d9d, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@70331524, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@198547b, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@353574a7, org.springframework.security.web.session.SessionManagementFilter@3af8144d, org.springframework.security.web.access.ExceptionTranslationFilter@2d15f9a2, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@2e70511c] 
+2021-12-12 22:49:41 - INFO - o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729 
+2021-12-12 22:49:41 - INFO - o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8089 (http) with context path '/SpringMVC' 
+2021-12-12 22:49:41 - INFO - t.e.spring.springboot.Application - Started Application in 4.56 seconds (JVM running for 5.017) 
+2021-12-12 22:49:51 - INFO - o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default' 
+2021-12-12 22:49:51 - INFO - com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated... 
+2021-12-12 22:49:51 - INFO - com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed. 

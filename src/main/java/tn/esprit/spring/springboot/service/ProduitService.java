@@ -10,4 +10,6 @@ public interface ProduitService {
     Produit addProduit(Produit p, Long idRayon, Long idStock);
 
     Produit retrieveProduit(Long id);
+
+     void assignFournisseurToProduit(Long fournisseurId, Long produitId) ;
 }

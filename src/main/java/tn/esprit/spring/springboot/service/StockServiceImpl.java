@@ -4,6 +4,7 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Service;
+import tn.esprit.spring.springboot.entity.Produit;
 import tn.esprit.spring.springboot.entity.Stock;
 import tn.esprit.spring.springboot.repository.StockRepository;
 
@@ -15,6 +16,10 @@ public class StockServiceImpl implements StockService{
 
     @Autowired
     private StockRepository stockRepository;
+
+
+    @Autowired
+    private ProduitService produitService;
 
     @Override
     public List<Stock> retrieveAllStocks() {
@@ -39,6 +44,18 @@ public class StockServiceImpl implements StockService{
     @Override
     public void deleteStock(Long id) {
         stockRepository.deleteById(id);
+    }
+
+    @Override
+    public void assignProduitToStock(Long idProduit, Long idStock) {
+        Stock st = stockRepository.findById(idStock).orElse(null);
+        if(st != null){
+            Produit p = produitService.retrieveProduit(idProduit);
+            if(p != null){
+                st.getProduits().add(p);
+                stockRepository.save(st);
+            }
+        }
     }
 
     @Override
@@ -67,5 +84,13 @@ public class StockServiceImpl implements StockService{
             count += st.getQte();
         }
         log.info("THE WHOLE STOCK IS: " + count);
+    }
+
+    @Scheduled(cron = "0 0 22 * * *")
+    public void retrieveStatusStock(){
+        List<Stock> st = stockRepository.findAll();
+        for(Stock s : st){
+            log.info(st.toString());
+        }
     }
 }

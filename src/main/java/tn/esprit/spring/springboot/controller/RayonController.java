@@ -10,7 +10,7 @@ import tn.esprit.spring.springboot.service.RayonService;
 import java.util.List;
 
 @RestController
-@RequestMapping("/produit")
+@RequestMapping("/rayon")
 public class RayonController {
 
     @Autowired

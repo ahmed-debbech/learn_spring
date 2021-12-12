@@ -8,7 +8,7 @@ import tn.esprit.spring.springboot.service.RayonService;
 import tn.esprit.spring.springboot.service.StockService;
 
 @RestController
-@RequestMapping("/produit")
+@RequestMapping("/stock")
 public class StockController {
 
     @Autowired

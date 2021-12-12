@@ -18,6 +18,8 @@ public class ProduitServiceImpl implements ProduitService {
     private StockService stockService;
     @Autowired
     private RayonService rayonService;
+    @Autowired
+    private FournisseurService fournisseurService;
 
     @Override
     public List<Produit> retrieveAllProduits() {
@@ -42,5 +44,17 @@ public class ProduitServiceImpl implements ProduitService {
     @Override
     public Produit retrieveProduit(Long id) {
         return produitRepository.findById(id).orElse(null);
+    }
+
+    @Override
+    public void assignFournisseurToProduit(Long fournisseurId, Long produitId) {
+        Produit p = produitRepository.getById(produitId);
+        if(p != null){
+            Fournisseur st = fournisseurService.get(fournisseurId);
+            if(st != null){
+                p.getFournisseurs().add(st);
+                produitRepository.save(p);
+            }
+        }
     }
 }
